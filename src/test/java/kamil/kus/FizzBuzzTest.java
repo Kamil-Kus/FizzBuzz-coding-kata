@@ -9,9 +9,8 @@ class FizzBuzzTest {
 
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/fizz.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/fizz2.csv", numLinesToSkip = 1)
     void fizzBuzz(String input, String expected) {
-        final FizzBuzz fizzBuzz = new FizzBuzz();
-        assertThat(fizzBuzz.fizzBuzz(input)).isEqualToIgnoringCase(expected);
+        assertThat(FizzBuzz.fizzBuzz(input)).isEqualToIgnoringCase(expected);
     }
 }
